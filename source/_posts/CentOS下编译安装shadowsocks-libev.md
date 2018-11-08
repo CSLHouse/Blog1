@@ -12,7 +12,7 @@ date: 2018-11-06 17:25:45
 
 - 编译环境准备&安装依赖包
 
-> yum install -y gcc automake autoconf libtool make build-essential autoconf libtool
+> yum install -y gcc automake autoconf libtool make build-essential autoconf libtool  asciidoc xmlto libsodium libev-devel  udns-devel
   yum install -y curl curl-devel unzip zlib-devel openssl-devel perl perl-devel cpio expat-devel gettext-devel
 - 下载源码
 
@@ -60,3 +60,11 @@ date: 2018-11-06 17:25:45
 请安装TLS开发包
 
 > yum install -y mbedtls-devel
+
+若提示：没有可用软件包 mbedtls-devel。
+请执行以下命令再重新安装：
+
+> yum install epel-release
+  yum update
+  yum install mbedtls-devel
+
